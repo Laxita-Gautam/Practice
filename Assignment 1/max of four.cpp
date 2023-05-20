@@ -2,32 +2,18 @@
 using namespace std;
 int max_of_four(int a, int b, int c, int d);
 int max_of_four(int a, int b, int c, int d)
-{   int g;
-    if(a>b){
-        if(a>c){
-            if(a>d){
-                g=a;
-            }
-            else{
-                g=d;
-            }
-        }
-    }
-    else if(b>c){
-            if(b>d){
-                g=b;
-            }
-            else{
-                g=d;
-            }
-        }
-    else if(c>d){
-            g=c;
-        }
-    else{
-            g=d;
-    }
-return g;
+{   int gre;
+    if(a>b && a >c && a >d)
+        gre = a;
+    else if(b>a && b>c && b>d)
+        gre = b;
+    else if(c>a && c>b && c>d)
+        gre = c;
+    else if(d>a && d>b && d>c)
+        gre = d;
+    else if(a=b=c=d)
+        gre = a;
+return gre;
 }
 int main() {
     int a, b, c, d;
